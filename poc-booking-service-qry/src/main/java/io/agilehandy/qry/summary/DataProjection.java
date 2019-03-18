@@ -74,7 +74,7 @@ public class DataProjection {
 	@StreamListener(target = Sink.INPUT,
 			condition = "headers['event_type']=='BOOKING_CREATED'")
 	public void createBookingSummaryProjection(@Payload BookingCreatedEvent event) {
-		// TODO:
+		log.info("Handle events which event is BOOKING_CREATED" + event.getCustomerId());
 	}
 
 }
